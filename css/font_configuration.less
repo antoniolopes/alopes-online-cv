@@ -1,0 +1,29 @@
+/*  Fonts */
+
+@font-xs-size:             11pt;
+@font-sm-size:             12pt;
+@font-md-size:             13pt;
+@font-lg-size:             15pt;
+
+.font-default {
+    font-family:    'Rambla', sans-serif;
+    font-size:      @font-xs-size;
+
+	@media (min-width: @screen-sm-min) {
+		font-size:				@font-sm-size;
+	}
+
+	@media (min-width: @screen-md-min) {
+		font-size:				@font-md-size;
+	}
+
+	@media (min-width: @screen-lg-min) {
+		font-size:				@font-lg-size;
+	}
+}
+
+.title-font {
+	font-weight: 			bold;
+	font-family: 			'Share Tech', sans-serif;
+	font-size: 				2em;
+}

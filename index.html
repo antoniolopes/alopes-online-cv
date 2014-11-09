@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    
+    <!--
+        Hello fellow geek! Welcome to the other side of my online curriculum vitae.
+        If you're reading this, it probably means you like to dabble in the programming arts.
+        I salute you.
+    -->
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta name="description" content="António Lopes - Online CV">
+        <meta name="author" content="António Lopes">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>
+            António Lopes | Online CV
+        </title>
+
+        <!-- Share Tech Web Font -->
+        <link href='http://fonts.googleapis.com/css?family=Share+Tech' rel='stylesheet' type='text/css'>
+
+        <!-- Rambla Web Font -->
+        <link href='http://fonts.googleapis.com/css?family=Rambla:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/ico" href="img/favicon.ico">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+
+        <!-- My CSS -->
+        <link rel="stylesheet" media="screen" type="text/css" href="css/styles.css">
+    </head>
+    
+    <body>
+        <div class="header-block">
+            <div class="header">
+                <div class="header-wrapper">
+                    <div class="header-container">
+                        <div class="header-title-container">
+                            <div class="header-title">
+                                <span class="title">António Luís Lopes</span>
+                                <span class="separator">|</span>
+                                <span class="subtitle">Online CV</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="header-photo-container">
+                            <div class="header-photo">
+                                <img src="img/me_header.jpg" id="image_me" class="img-responsive" />
+                            </div>
+                        </div>
+
+                        <div class="header-callout-container">
+                            <div class="header-callout">
+                                <div id="text_callout">
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div id="header_callout_dot1"></div>
+                            <div id="header_callout_dot2"></div>
+                            <div id="header_callout_dot3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-menu">
+                <div class="header-menu-wrapper">
+                    <div class="header-menu-container">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="#" id="education" class="click-option show-option">
+                                        <i class="fa fa-check-square"></i>
+                                        Education
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" id="work" class="click-option show-option">
+                                        <i class="fa fa-check-square"></i>
+                                        Work <span class="hidden-xs">Experience</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" id="personal" class="click-option show-option">
+                                        <i class="fa fa-check-square"></i>
+                                        Personal <span class="hidden-xs">Milestones</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" id="reverse_order" class="click-option">
+                                        <i class="fa fa-square"></i>
+                                        Reverse <span class="hidden-xs">Cronological Order</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="intro-block">
+            <div class="intro-container">
+                <div class="intro-title">
+                    A bit about myself
+                </div>
+                <div class="intro-text">
+                    <p>
+                        Hello there! My name is António Luís Lopes. I'm a Portuguese programmer
+                        working in Lisbon and living in Sintra. I've dedicated most of my professional life
+                        to teaching, researching, designing and developing all kinds of systems
+                        in different environments: desktop, web, mobile and physical computing.
+                    </p>
+
+                    <p>
+                        Most of my work has been directly related to Artificial Intelligence, which has been my
+                        field of research since the year 2000. In the last few years, I've been focusing
+                        more on the development of web applications, from back-end to front-end, including API 
+                        usage and development.
+                    </p>
+                    <p>
+                        This is my online curriculum vitae. Scroll away to discover more about my work and myself.
+                        If you're interested in contacting me, feel free to do so through one of the social network 
+                        handlers available below.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="cronological_order" ng-controller="blocksCtrl">
+            <div ng-repeat="block in blocks" id="{{block.id}}" class="{{block.classes}} block-wrapper">
+                <div class="block-container">
+                    <div class="block-content">
+                        <div class="title">
+                            {{block.title}}, {{block.dates}}
+                        </div>
+                        <div class="subtitle">
+                            <a ng-if="block.place.link" href="{{block.place.link}}" target="_blank">{{block.place.title}}</a> 
+                            <span ng-if="!block.place.link">{{block.place.title}}</span>
+                            <span ng-if="block.place.city_country">({{block.place.city_country}})</span>
+                        </div>
+                    </div>
+                    <div class="block-content">
+                        <div ng-class-odd="'not-visible'">
+                            <div class="icon">
+                                <i class="{{block.icon_classes}}"></i>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div ng-repeat="text in block.description.texts">
+                                <p ng-bind-html="text"></p>
+                            </div>
+                            <div ng-repeat="item in block.description.items">
+                                <span ng-if="item.title"><b>{{item.title}}</b>:</span>
+                                <ul class="fa-ul">
+                                    <li ng-repeat="point in item.points">
+                                        <i class="fa-li fa fa-check"></i><span ng-bind-html="point.text"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div ng-class-even="'not-visible'">
+                            <div class="icon">
+                                <i class="{{block.icon_classes}}"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="other_blocks" ng-controller="blocksCtrl">
+            <div ng-repeat="other_block in other_blocks" id="{{other_block.id}}" class="{{other_block.classes}} block-wrapper">
+                <div class="block-container">
+                    <div class="block-content">
+                        <div class="title">
+                            {{other_block.title}}
+                        </div>
+                    </div>
+                    <div class="block-content">
+                        <div ng-class-odd="'not-visible'">
+                            <div class="icon">
+                                <i class="{{other_block.icon_classes}}"></i>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div ng-repeat="text in other_block.description.texts">
+                                <p ng-bind-html="text"></p>
+                            </div>
+                            <div ng-repeat="item in other_block.description.items">
+                                <span ng-if="item.title"><b>{{item.title}}</b>:</span>
+                                <ul class="fa-ul">
+                                    <li ng-repeat="point in item.points">
+                                        <i class="fa-li fa fa-check"></i><span ng-bind-html="point.text"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div ng-class-even="'not-visible'">
+                            <div class="icon">
+                                <i class="{{other_block.icon_classes}}"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-wrapper">
+                <div class="footer-container">
+                    <nav class="social">
+                        <ul>
+                            <li><a href="http://www.linkedin.com/in/alopes" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+                            <li><a href="https://twitter.com/tonyvirtual" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+                            <li><a href="https://www.facebook.com/tonyvirtual" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                            <li><a href="http://www.google.com/profiles/antonio.lopes" target="_blank"><i class="fa fa-google-plus-square"></i></a></li>
+                            <li><a href="https://github.com/antoniolopes" target="_blank"><i class="fa fa-github-square"></i></a></li>
+                        </ul>
+                    </nav>
+                    <nav class="tools">
+                        <ul>
+                            <li><a href="http://www.angularjs.org" target="_blank"><img src="img/angular-icon.png" /></a></li>
+                            <li><a href="http://jquery.com" target="_blank"><img src="img/jquery-icon.png" /></a></li>
+                            <li><a href="http://en.wikipedia.org/wiki/HTML5" target="_blank"><i class="fa fa-html5"></i></a></li>
+                            <li><a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank"><i class="fa fa-css3"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- JQuery -->
+        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+
+        <!-- Angular.js -->
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="js/angular-sanitize.min.js"></script>
+        <script type="text/javascript" src="js/controllers/blocks.js"></script>
+
+        <!-- My Javascript -->
+        <script type="text/javascript" src="js/scripts.js"></script>
+    </body>
+</html>
