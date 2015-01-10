@@ -5441,10 +5441,13 @@ div {
   font-size: 2em;
   display: table-cell;
   vertical-align: middle;
-  color: #efefef;
+}
+.header-block .header .header-wrapper .header-container .header-title-container .header-title a {
+  text-decoration: none;
 }
 .header-block .header .header-wrapper .header-container .header-title-container .header-title .title {
   font-size: 1em;
+  color: #efefef;
 }
 .header-block .header .header-wrapper .header-container .header-title-container .header-title .separator {
   font-size: 0.8em;
