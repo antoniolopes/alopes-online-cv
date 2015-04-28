@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
-    
+
     <!--
         Hello fellow geek! Welcome to the other side of my online curriculum vitae.
         If you're reading this, it probably means you like to dabble in the programming arts.
@@ -33,7 +33,7 @@
         <!-- My CSS -->
         <link rel="stylesheet" media="screen" type="text/css" href="css/styles.css">
     </head>
-    
+
     <body>
         <div class="header-block">
             <div class="header">
@@ -148,7 +148,11 @@
                     <div class="block-content">
                         <div ng-class-odd="'not-visible'">
                             <div class="icon">
-                                <i class="{{block.icon_classes}}"></i>
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="{{block.icon_classes}} fa-stack-1x fa-inverse"></i>
+                                </span>
+                                <!--<i class="{{block.icon_classes}}"></i>-->
                             </div>
                         </div>
                         <div class="content">
@@ -166,7 +170,11 @@
                         </div>
                         <div ng-class-even="'not-visible'">
                             <div class="icon">
-                                <i class="{{block.icon_classes}}"></i>
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="{{block.icon_classes}} fa-stack-1x fa-inverse"></i>
+                                </span>
+                                <!--<i class="{{block.icon_classes}}"></i>-->
                             </div>
                         </div>
                     </div>
@@ -185,7 +193,11 @@
                     <div class="block-content">
                         <div ng-class-odd="'not-visible'">
                             <div class="icon">
-                                <i class="{{other_block.icon_classes}}"></i>
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="{{other_block.icon_classes}} fa-stack-1x fa-inverse"></i>
+                                </span>
+                                <!--<i class="{{other_block.icon_classes}}"></i>-->
                             </div>
                         </div>
                         <div class="content">
@@ -203,7 +215,11 @@
                         </div>
                         <div ng-class-even="'not-visible'">
                             <div class="icon">
-                                <i class="{{other_block.icon_classes}}"></i>
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="{{other_block.icon_classes}} fa-stack-1x fa-inverse"></i>
+                                </span>
+                                <!--<i class="{{other_block.icon_classes}}"></i>-->
                             </div>
                         </div>
                     </div>

@@ -441,7 +441,7 @@ angular.module('app', ['ngSanitize']).controller('blocksCtrl', ['$scope', functi
       order: 19,
       classes: 'work order',
       title: 'Systems Architect and Full Stack Developer',
-      dates: 'Feb. 2011 onwards',
+      dates: 'Feb. 2011 / Jan. 2015',
       place: {
         link: 'http://www.iscte-iul.pt/',
         title: 'University Institute of Lisbon',
@@ -466,6 +466,43 @@ angular.module('app', ['ngSanitize']).controller('blocksCtrl', ['$scope', functi
             title: 'Major languages/technologies used',
             points: [
               {text: 'Java, Scala, PHP and Python'},
+              {text: 'Javascript (JQuery), CSS (LESS), HTML'},
+              {text: 'JSON, XML and MySQL'}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      id: 'coordinator',
+      order: 20,
+      classes: 'work order',
+      title: 'Head of Development',
+      dates: 'Feb. 2015 onwards',
+      place: {
+        link: 'http://www.iscte-iul.pt/',
+        title: 'University Institute of Lisbon',
+        city_country: 'Lisbon, Portugal'
+      },
+      icon_classes: 'fa fa-pie-chart',
+      description: {
+        texts: [
+          'I\'m now the Head of the Information Systems Development team where I lead a group of developers that design and develop in-house systems and websites, focusing on the development of APIs, integration with existing platforms/databases and front-end/back-end development using MVC frameworks.'
+        ],
+        items: [
+          {
+            title: 'Main responsibilities and acquired knowledge',
+            points: [
+              {text: 'How to coordinate the work of a bunch of talented developers without going crazy with the bureaucracy involved.'},
+              {text: 'I still code (a lot) and develop in-house systems and websites, APIs (Application Programming Interfaces) and Web Services'},
+              {text: 'Still working hard to make sure that existing platforms and databases are fully integrated'},
+              {text: 'Most front-end/back-end development is done using MVC (Model-View-Controller) frameworks'}
+            ]
+          },
+          {
+            title: 'Major languages/technologies used',
+            points: [
+              {text: 'Java, Scala, PHP (Drupal, Wordpress)'},
               {text: 'Javascript (JQuery), CSS (LESS), HTML'},
               {text: 'JSON, XML and MySQL'}
             ]
