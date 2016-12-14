@@ -546,8 +546,8 @@ angular.module('app', ['ngSanitize']).controller('blocksCtrl', ['$scope', functi
           {
             points: [
               {text: 'I ocasionally collaborate with the nice folks at the <a href="http://vitruviusfablab.iscte-iul.pt/" target="_blank">Vitruvius Fab-Lab</a> giving them a hand on all kinds of stuff related to physical and nano computing'},
-              {text: 'Every now and then I challenge myself into creating a small website (usually a game) in under 24 hours. Not all of these websites were created in under 24 hours but it was still fun creating them. Here are some <a href="http://antoniolopes.info/wp/portfolio/" target="_blank">examples</a>.'},
-              {text: 'Like most internet-savy people on the planet, I <a href="http://antoniolopes.info/wp/" target="_blank">blog</a> sometimes but also <a href="http://antoniolopes.info/wp/essays/" target="_blank">write more serious stuff</a> (almost always about techonology and the future)'},
+              {text: 'Every now and then I challenge myself into creating a small website (usually a game) in under 24 hours. Not all of these websites were created in under 24 hours but it was still fun creating them. Here are some <a href="//antoniolopes.info/portfolio/" target="_blank">examples</a>.'},
+              {text: 'Like most internet-savy people on the planet, I <a href="//antoniolopes.info/" target="_blank">blog</a> sometimes but also <a href="//antoniolopes.info/essays/" target="_blank">write more serious stuff</a> (almost always about techonology and the future)'},
               {text: 'I\'ve been playing the guitar since I was 15, but now I decided I want to learn to play the ukulele (and I\'m enjoying it much more than I thought I would)'},
               {text: 'I\'m trying to get fit (\'cause I\'m not getting any younger), so I run and I bike'},
               {text: 'I know how to make a soufflé'}
